@@ -65,5 +65,5 @@ jobs:
           git init
           git add -A
           git commit -m 'publish gh page'
-          git push -f https://Cruel-Ocean:${{ secrets.GITHUB_TOKEN }}@github.com/Cruel-Ocean/api.git gh-pages
+          git push -f https://Cruel-Ocean:${{ secrets.GITHUB_TOKEN }}@github.com/Cruel-Ocean/website-helper.git gh-pages
         shell: bash
