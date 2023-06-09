@@ -34,9 +34,6 @@ jobs:
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
-      - name: Build project
-        run: echo ${{secrets.VITE_BACKEND_BASE_URL}} && export VITE_TWITCH_CLIENT_ID=${{secrets.VITE_TWITCH_CLIENT_ID}} && export VITE_TWITCH_CLIENT_SECRET=${{secrets.VITE_TWITCH_CLIENT_SECRET}} && export VITE_SOCKET_PORT=${{secrets.VITE_SOCKET_PORT}} && export VITE_BACKEND_BASE_URL=${{secrets.VITE_BACKEND_BASE_URL}} && npm run build
-
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
@@ -65,5 +62,5 @@ jobs:
           git init
           git add -A
           git commit -m 'publish gh page'
-          git push -f https://LLath:${{ secrets.GITHUB_TOKEN }}@github.com/LLath/cro_obs_sources.git gh-pages
+          git push -f https://Cruel-Ocean:${{ secrets.GITHUB_TOKEN }}@github.com/Cruel-Ocean/api.git gh-pages
         shell: bash
